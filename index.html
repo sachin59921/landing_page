@@ -44,14 +44,27 @@
 
         .image {
             width: 100%;
-            max-height: 200px;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
             object-fit: cover;
             border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+
+        .image:hover {
+            transform: scale(1.1);
         }
 
         .description {
             margin-top: 10px;
             color: #666;
+            transition: color 0.3s ease;
+        }
+
+        .description:hover {
+            color: #ff6b6b;
         }
 
         /* Style the header */
@@ -88,6 +101,41 @@
         .cta-button:hover {
             background-color: #ff4f4f;
         }
+
+        /* Style the featured section */
+        .featured-section {
+            background-color: #f9f9f9;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .featured-section h2 {
+            margin: 0;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .featured-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        /* Style the footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
     </style> 
 </head> 
 <body> 
@@ -119,6 +167,62 @@
                 <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi ac erat bibendum, eu tristique justo pharetra.</p> 
             </div> 
         </div> 
-    </div> 
+    </div>
+
+    <div class="featured-section">
+        <h2>Featured Product</h2>
+        <p>Discover our top-rated product of the month.</p>
+        <div class="container">
+            <div class="column">
+                <div class="product">
+                    <img class="image" src="img/oneplus nord.jpg" alt="Featured Product">
+                    <h2>Featured Product</h2>
+                    <p class="description">Operating System: Oxygen OS based on Android 13.1
+                        Processor: Qualcomm Snapdragon 695 5G
+                        Battery & Charging: 5000 mAh with 67W SUPERVOOC Endurance Edition</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="product">
+                    <img class="image" src="img/apple 13.jpg" alt="Featured Product">
+                    <h2>Featured Product</h2>
+                    <p class="description">Operating System: Oxygen OS based on IOS
+                        Battery & Charging: 4500 mAh with 67W SUPERVOOC Endurance Edition</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="product">
+                    <img class="image" src="img/pixel 7.jpg" alt="Featured Product">
+                    <h2>Featured Product</h2>
+                    <p class="description">Operating System: Oxygen OS based on Android 13.1
+                        Processor: Qualcomm Snapdragon 775 5G
+                        Battery & Charging: 6000 mAh with 67W SUPERVOOC Endurance Edition</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Product Landing Page. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+
+    <script>
+        // Example JavaScript functionality
+        const ctaButton = document.querySelector('.cta-button');
+        ctaButton.addEventListener('click', function() {
+            alert('You clicked the Shop Now button!');
+        });
+        
+        // Add animation transitions to products
+        const products = document.querySelectorAll('.product');
+        products.forEach((product) => {
+            product.addEventListener('mouseover', () => {
+                product.classList.add('animate');
+            });
+            product.addEventListener('mouseout', () => {
+                product.classList.remove('animate');
+            });
+        });
+    </script>
 </body>
 </html>
