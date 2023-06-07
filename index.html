@@ -5,57 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Landing Page</title> 
-  <style>
-    /* Define the columns */
-    .container {
-      display: flex;
-      justify-content: space-between;
-    }
-    
-    .column {
-      flex-basis: 30%;
-      padding: 10px;
-    }
-    
-    /* Style the components */
-    .product {
-      text-align: center;
-    }
-    
-    .image {
-      width: 100%;
-      max-height: 200px;
-      object-fit: cover;
-    }
-    
-    .description {
-      margin-top: 10px;
-    }
-  </style> 
- </head> 
- <body> 
-  <div class="container"> 
-   <div class="column"> 
-    <div class="product"> 
-     <img class="image" src="img/redmi note 10.jpg" alt="Product 1"> 
-     <h2>REDMI NOTE 10</h2> 
-     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi ac erat bibendum, eu tristique justo pharetra.</p> 
+    <style>
+        /* Define the columns */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .column {
+            flex-basis: calc(33.33% - 20px);
+            padding: 10px;
+        }
+        
+        /* Style the components */
+        .product {
+            text-align: center;
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .image {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        
+        .description {
+            margin-top: 10px;
+        }
+    </style> 
+</head> 
+<body> 
+    <div class="container"> 
+        <div class="column"> 
+            <div class="product"> 
+                <img class="image" src="img/redmi note 10.jpg" alt="Product 1"> 
+                <h2>REDMI NOTE 10</h2> 
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi ac erat bibendum, eu tristique justo pharetra.</p> 
+            </div> 
+        </div> 
+        <div class="column"> 
+            <div class="product"> 
+                <img class="image" src="img/oppo.jpg" alt="Product 2"> 
+                <h2>OPPO A17k</h2> 
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi ac erat bibendum, eu tristique justo pharetra.</p> 
+            </div> 
+        </div> 
+        <div class="column"> 
+            <div class="product"> 
+                <img class="image" src="img/samsung.jpg" alt="Product 3"> 
+                <h2>SAMSUNG M30s</h2> 
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi ac erat bibendum, eu tristique justo pharetra.</p> 
+            </div> 
+        </div> 
     </div> 
-   </div> 
-   <div class="column"> 
-    <div class="product"> 
-     <img class="image" src="img/oppo.jpg" alt="Product 2"> 
-     <h2>OPPO A17k</h2> 
-     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi ac erat bibendum, eu tristique justo pharetra.</p> 
-    </div> 
-   </div> 
-   <div class="column"> 
-    <div class="product"> 
-     <img class="image" src="img/samsung.jpg" alt="Product 3"> 
-     <h2>SAMSUNG M30s</h2> 
-     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi ac erat bibendum, eu tristique justo pharetra.</p> 
-    </div> 
-   </div> 
-  </div> 
- </body>
+</body>
 </html>
