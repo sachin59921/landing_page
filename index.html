@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Landing Page</title> 
     <style>
-        /* Define the columns */
+        /* Define the layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
         .container {
             display: flex;
             justify-content: space-between;
@@ -15,34 +22,81 @@
             margin: 0 auto;
             padding: 20px;
         }
-        
+
         .column {
             flex-basis: calc(33.33% - 20px);
             padding: 10px;
         }
-        
+
         /* Style the components */
         .product {
             text-align: center;
-            background-color: #f7f7f7;
+            background-color: #fff;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-        
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
         .image {
             width: 100%;
             max-height: 200px;
             object-fit: cover;
             border-radius: 5px;
         }
-        
+
         .description {
             margin-top: 10px;
+            color: #666;
+        }
+
+        /* Style the header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Style the call-to-action button */
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6b6b;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
         }
     </style> 
 </head> 
 <body> 
+    <div class="header">
+        <h1>Welcome to our Product Landing Page</h1>
+        <p>Check out our latest products below:</p>
+        <a class="cta-button" href="#">Shop Now</a>
+    </div>
+
     <div class="container"> 
         <div class="column"> 
             <div class="product"> 
